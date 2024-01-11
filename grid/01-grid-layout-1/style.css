@@ -11,13 +11,8 @@ html {
   box-sizing: border-box;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(5, 350px);
-  grid-template-areas:
-    "header header header header header"
-    "sidebar nav nav nav nav"
-    "sidebar article article article article"
-    "sidebar article article article article"
-    "footer footer footer footer footer";
+  grid-template-columns: 400px 1000px;
+  grid-template-rows: 100px 100px 500px 100px;
 }
 
 .container div {
@@ -31,27 +26,25 @@ html {
 
 .header {
   background-color: #006157;
-  grid-area: header;
+  grid-column: 1 / 3;
 }
 
 .sidebar {
   background-color: #005b94;
-  grid-area: sidebar;
+  grid-row: 2 / 4;
 }
 
 .nav {
   background-color: #642cde;
-  grid-area: nav;
 }
 
 .article {
   background-color: #7e1dc3;
-  grid-area: article;
 }
 
 .footer {
   background-color: #393f4d;
-  grid-area: footer;
+  grid-column: 1 / 3;
 }
 
 .article p {
